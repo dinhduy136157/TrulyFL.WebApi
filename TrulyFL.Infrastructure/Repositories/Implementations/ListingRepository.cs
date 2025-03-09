@@ -9,9 +9,9 @@ using TrulyFL.Infrastructure.Repositories.Interfaces;
 
 namespace TrulyFL.Infrastructure.Repositories.Implementations
 {
-    public class Listing : GenericRepository<Listing>, IListingRepository
+    public class ListingRepository : GenericRepository<Listing>, IListingRepository
     {
-        public Listing(TrulyFLContext context) : base(context)
+        public ListingRepository(TrulyFLContext context) : base(context)
         {
         }
     }

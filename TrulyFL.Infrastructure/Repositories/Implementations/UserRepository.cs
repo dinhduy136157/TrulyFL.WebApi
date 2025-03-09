@@ -9,7 +9,7 @@ using TrulyFL.Infrastructure.Repositories.Interfaces;
 
 namespace TrulyFL.Infrastructure.Repositories.Implementations
 {
-    public class UserRepository : GenericRepository<ListingPhoto>, IUserRepository
+    public class UserRepository : GenericRepository<User>, IUserRepository
     {
         public UserRepository(TrulyFLContext context) : base(context)
         {
