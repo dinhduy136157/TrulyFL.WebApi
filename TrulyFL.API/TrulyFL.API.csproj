@@ -28,4 +28,9 @@
     <Folder Include="Middlewares\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TrulyFL.Application\TrulyFL.Application.csproj" />
+    <ProjectReference Include="..\TrulyFL.Infrastructure\TrulyFL.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

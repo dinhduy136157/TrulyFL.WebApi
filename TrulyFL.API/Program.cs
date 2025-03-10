@@ -1,7 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using TrulyFL.Infrastructure.Context;
+using TrulyFL.Infrastructure.UnitOfWorks;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddDbContext<TrulyFLContext>(ops => ops.UseSqlServer(builder.Configuration.GetConnectionString("TrulyFLConnection")));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
